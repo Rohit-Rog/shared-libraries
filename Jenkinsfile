@@ -13,5 +13,10 @@ pipeline{
 			}
 
 		}
+		stage('py-testing'){
+			steps{
+				pyscript()
+			}
+		}
 	}
 }
