@@ -9,6 +9,7 @@ pipeline{
 	stages{
 		stage('shared-lib-testing'){
 			steps{
+				func(name: "${params.NAME}", switch: "${params.TOGGLE}")
 			}
 
 		}
