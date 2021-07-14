@@ -7,13 +7,13 @@ pipeline{
 		booleanParam(name: "TOGGLE", defaultValue: false, description: "turn it on or off")
 	}
 	environment{
-		name = "${params.NAME}"
-		switch = "${params.TOGGLE}"
+		stringParam = "${params.NAME}"
+		boolParam = "${params.TOGGLE}"
 	}
 	stages{
 		stage('shared-lib-testing'){
 			steps{
-				func(name: "${env.NAME}", switch: "${env.TOGGLE}")
+				func(name: "${env.stringParam}", switch: "${env.boolParam}")
 			}
 
 		}
