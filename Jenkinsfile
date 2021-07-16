@@ -21,9 +21,6 @@ pipeline{
 
 		}
 		stage('py-testing'){
-			tools{
-				jenkins.plugins.shiningpanda.tools.PythonInstallation
-			}
 			steps{
 				pyscript()
 			}
