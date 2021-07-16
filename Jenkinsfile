@@ -11,7 +11,6 @@ pipeline{
 	environment{
 		stringParam = "${params.NAME}"
 		boolParam = "${params.TOGGLE}"
-		env.PATH = env.PATH + ";C:\\Windows\\System32"
 	}
 	
 	stages{
