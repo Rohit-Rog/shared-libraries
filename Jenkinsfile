@@ -3,7 +3,7 @@
 pipeline{
 	agent{
 		dockerfile{
-			filename libraryResource('Docker.build')
+			filename libraryResource('Dockerfile.build')
 		}
 	}
 	parameters{
