@@ -2,9 +2,8 @@
 
 pipeline{
 	agent{
-		docker{
-			image 'python:3.9'
-			label 'python3'
+		dockerFile{
+			filename libraryResource('Docker.build')
 		}
 	}
 	parameters{
