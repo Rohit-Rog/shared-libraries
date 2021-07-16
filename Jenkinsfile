@@ -22,7 +22,7 @@ pipeline{
 		}
 		stage('py-testing'){
 			tools{
-				jenkins.plugins.shiningpanda.tools.PythonInstallation 'python3'
+				jenkins.plugins.shiningpanda.tools.PythonInstallation
 			}
 			steps{
 				pyscript()
