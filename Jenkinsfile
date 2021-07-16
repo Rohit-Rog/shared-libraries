@@ -2,7 +2,10 @@
 
 pipeline{
 	agent{
-		label 'master'
+		docker{
+			image 'python:3.9'
+			label 'python3'
+		}
 	}
 	parameters{
 		string(name: "NAME", defaultValue: "JOHN DOE", description: "your own name")
