@@ -1,7 +1,9 @@
 @Library('shared-libs') _
 
 pipeline{
-	agent any
+	agent{
+		label 'master'
+	}
 	parameters{
 		string(name: "NAME", defaultValue: "JOHN DOE", description: "your own name")
 		booleanParam(name: "TOGGLE", defaultValue: false, description: "turn it on or off")
@@ -10,6 +12,7 @@ pipeline{
 		stringParam = "${params.NAME}"
 		boolParam = "${params.TOGGLE}"
 	}
+	tool name: 'python3', type: 'jenkins.plugins.shiningpanda.tools.PythonInstallation'
 	stages{
 		stage('shared-lib-testing'){
 			steps{
