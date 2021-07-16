@@ -12,6 +12,9 @@ pipeline{
 		stringParam = "${params.NAME}"
 		boolParam = "${params.TOGGLE}"
 	}
+	tool{
+		python 'python3'
+	}
 	stages{
 		stage('shared-lib-testing'){
 			steps{
@@ -20,9 +23,6 @@ pipeline{
 
 		}
 		stage('py-testing'){
-			tool{
-				python 'python3'
-			}
 			steps{
 				pyscript()
 			}
