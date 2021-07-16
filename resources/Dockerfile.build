@@ -1,0 +1,5 @@
+FROM ubuntu:latest
+
+MAINTAINER Rohit rohitrodg@gmail.com
+
+RUN apt-get install python -y
