@@ -2,9 +2,7 @@
 
 pipeline{
 	agent{
-		dockerfile{
-			filename libraryResource('Dockerfile.build')
-		}
+		label 'master'
 	}
 	parameters{
 		string(name: "NAME", defaultValue: "JOHN DOE", description: "your own name")
