@@ -1,5 +1,3 @@
 def call(){
-	withPythonEnv('C:/Users/LENOVO/AppData/Local/Programs/Python/Python39/python'){
-		bat 'python libraryResource('func.py')'
-	}
+	bat 'C:/Users/LENOVO/AppData/Local/Programs/Python/Python39/python.exe libraryResource('func.py')'
 }
