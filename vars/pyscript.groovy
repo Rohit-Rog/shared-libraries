@@ -1,3 +1,5 @@
 def call(){
-	sh 'python libraryResource('func.py')'
+	withPythonEnv('python3'){
+		bat 'python libraryResource('func.py')'
+	}
 }
