@@ -1,7 +1,7 @@
 import os
 
 def Func(name: str,  switch: bool):
-    if(switch==True):
+    if(switch=="true"):
         print("NAME: {}".format(name))
     else:
         print("switched off")
